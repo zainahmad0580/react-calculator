@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.container{
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    border: 4px solid white;
+    background: black;
+    border-radius: 10px;
+}
+
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto); 
+}
+
+input[type='text']{
+    margin: 10px 0px 10px;
+    height: 75px;
+    width: 100%;
+    background-color: #8294C4;;
+    border: 0px;
+    border-radius: 8px;
+    color: white;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn-primary{
+    background-color:  #537FE7;
+}
+#clear{
+    grid-column: 1/3;
+    grid-row: 1;
+    background-color: #DF2E38;
+}
+#result{
+    grid-column: 3/5;
+    grid-row: 5;
+}
+#backspace{
+    background-color: #DF2E38;
+   
+}
+button{
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #8294C4;
+    color: white;
+    font-weight: 500;
+}
+
+button:hover{
+    opacity: 80%;
+}
