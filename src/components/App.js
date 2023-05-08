@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css';
+import About from './About.js';
+import Contact from './Contact.js';
+import Home from './Home.js';
 
 const App = () => {
     const [result, setResult] = useState('');
@@ -23,6 +27,20 @@ const App = () => {
     }
   return (
     <>
+    <Router>
+      <div>
+        <nav>      
+            <Link to="/" className='ref'>Home</Link>
+            <Link to="/about"  className='ref'>About</Link>        
+            <Link to="/contact"  className='ref'>Contact</Link>
+        </nav>
+        <Routes>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact/>}></Route>
+          <Route path="/" element={<Home/>}></Route>
+        </Routes>
+      </div>
+    </Router>
         <div className='container'>
             <form>
                 <input type='text' value={result}></input>

@@ -10,6 +10,17 @@ body{
     align-items: center;
     background-color: black;
 }
+h1{
+    color: white;
+}
+nav{
+    margin-top: 20px;
+}
+.ref{
+    margin: 0px 10px 0px;
+    text-decoration: none;
+    color: white;
+}
 .container{
     padding: 10px;
     top: 50%;
